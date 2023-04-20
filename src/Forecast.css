@@ -1,0 +1,8 @@
+.forecast{
+    position: relative;
+    width: 800px;
+    height: 300px;
+    margin: 5px;
+    text-align: center;
+    background-color: white;
+}
