@@ -1,17 +1,30 @@
 import React, { useState } from 'react'
 import './Header.css'
+import { useDispatch } from 'react-redux';
+
 const Header = () => {
  const [place,setPlace]=useState('') ;
-const  WAPI=`https://api.weatherapi.com/v1/forecast.json?key=ea0354227bb7462888d63005232004&q=${place}&aqi=no`;
+
+const dispatch=useDispatch() ;
 async function searchtemp(){
-    console.log(place)
-    const data =await fetch(WAPI).then((d)=>d.json()).then((d)=>{
+    const placedata={place:place};
+    const data =await fetch('https://localhost:5000/temp',
+        {
+headers:{  'Content-Type': 'application/json'    },
+body:JSON.stringify(placedata),
+method:'POST'
+
+        }
+    ).then((d)=>d.json()).then((d)=>{
         console.log(d) ; 
     })
-   
+    console.log("hello")
+    dispatch({type:'SET_DATA',payload:data}) ;
     console.log(data) ;
     setPlace('');
  }
+
+
   return (
     <div  className='Header'>
       <div><h3>MausamWebApp</h3></div>
