@@ -17,14 +17,14 @@ const Main = () => {
 
  if(data.isLoading===null){
  
- return <h1>Search the temperature</h1>}
+ return <h2>Search the temperature</h2>}
  if(data.error===true){
   return <h1>No Such Place Found Please Try Again.</h1>
  }
   return (
     <div className='Main'>
  {
-  data.isLoading===true ?<h1>Loading...</h1> :(
+  data.isLoading===true ?<h1 style={{color:'whitesmoke'}}>Loading...</h1> :(
      <>
       <Current data={data.placedata} ></Current>
       <Forecast data={data.placedata} ></Forecast>
