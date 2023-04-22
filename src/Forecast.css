@@ -1,8 +1,29 @@
+.forecast1{
+  flex-wrap: wrap;  
+ display: flex;
+align-items: center;
+ justify-content: space-between;
+ 
+}
 .forecast{
     position: relative;
     width: 800px;
-    height: 300px;
+    height: 250px;
     margin: 5px;
     text-align: center;
-    background-color: white;
+ color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: rgba(249, 249, 255, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+}
+@media screen and (max-width:480px){
+    .forecast{
+        height: auto;
+        margin: 10px;
+    }
+    .forecast1{
+        justify-content: center;
+         flex-wrap: wrap;
+
+     }
 }

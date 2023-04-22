@@ -1,33 +1,38 @@
-.Header{
-    position: relative;
-    top: 0 ;
-    left: 0; 
-    display: flex;
-    width: 100vw;
+.Header {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100vw;
 
-    justify-content: space-around;
-    background-color: grey;
-    color: white;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  justify-content: space-around;
+  background-color: grey;
+  color: white;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.input{
-margin: 5px;
-padding: 10px;
-
-border-style: groove;
-border-color: aqua;
-border-radius: 5px;
-
-
+.input {
+  margin: 5px;
+  padding: 10px;
+  border-style: groove;
+  border-color: aqua;
+  border-radius: 5px;
 }
 
-
-.button{
-    width: 100px;
-    border-radius: 5px;
-    border: none;
-padding: 10px;
-cursor: pointer;
-background-color: rgb(7, 237, 237);
+.button {
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(40, 40, 40);
+}
+@media screen and (max-width:480px)  {
+    .Header{
+        display: block;
+        align-items: center;
+        text-align: center ;
+    }
+    
 }

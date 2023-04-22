@@ -1,9 +1,40 @@
 .Current{
     text-align: center;
     width: 400px;
-    background-color: white;
+    background-color: blueviolet;
+    color: white;
     border-radius: 15px;
-    height: 300px;
-    margin: 10px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 300px ;
+ 
+    display: block;
+     
+    box-shadow: rgba(249, 249, 255, 0.2) 0px 7px 29px 0px;
+}
+.upperdiv{
+    display: flex;
+    flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+
+}
+.upperdiv img{
+    
+    width: 150px;
+}
+span{
+    font-size: 45px;
+    font-weight: 1000;
+}
+.lowerdiv{
+    font-weight: 500;
+    height: 140px;
+    display: block;
+}
+.lowerdiv .div{
+    display: flex;
+    flex-wrap: wrap;
+    text-align:left;
+    height: 70px;
+    justify-content: space-around;
 }

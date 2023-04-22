@@ -1,0 +1,9 @@
+.forecastdiv{
+    height: 150px;
+    width: 180px;
+  background-color: blueviolet;
+margin: 10px;
+
+color: white;
+border-radius: 5px;
+}
