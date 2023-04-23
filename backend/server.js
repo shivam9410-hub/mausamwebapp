@@ -17,8 +17,17 @@ WAPI='https://api.weatherapi.com/v1/forecast.json?key=ea0354227bb7462888d6300523
 app.listen(5000,()=>{
     console.log("server is running at port 5000")
 })
+
+const cache =require('memory-cache') ; 
+
 app.post('/temp' ,async function(req,res){
-   const place = req.body.place;
+  const place = req.body.place;
+ const cachedData=cache.get(place) ;
+ if(cachedData) {
+  res.send(cachedData) ;
+  return ;
+ }
+
 
 const data =  await fetch(`https://api.weatherapi.com/v1/forecast.json?key=ea0354227bb7462888d63005232004&q=${place}&aqi=no&days=4`).then(
          
@@ -32,5 +41,7 @@ const data =  await fetch(`https://api.weatherapi.com/v1/forecast.json?key=ea035
 }) 
 
 const tempofplace= JSON.stringify({data:data}) ;
+cache.put(place,tempofplace,5*60*1000) ;
  return res.send(tempofplace) ;
+
 } )

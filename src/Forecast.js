@@ -13,7 +13,7 @@ const Forecast = () => {
     <div className="forecast1">
    
       {forecastday.map((each)=>{
-        return <Forecastdiv data={each}/>
+        return <Forecastdiv   data={each}/>
       })}
     </div>
     </div>
