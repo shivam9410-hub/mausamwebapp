@@ -1,0 +1,11 @@
+.loading{
+  width: 100vw;
+  height: 100vh;
+  color: whitesmoke;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  display: flex;
+  background-color: rgb(41, 39, 39);
+  justify-content: center;   
+}
