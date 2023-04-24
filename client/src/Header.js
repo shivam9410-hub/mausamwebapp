@@ -48,7 +48,7 @@ const Header = () => {
           value={place}
           onChange={(e) => setPlace(e.target.value)}
           placeholder="Enter The Place"
-        ></input>
+         required></input>
         <button className="button" type="submit">
           Search 
         </button>
